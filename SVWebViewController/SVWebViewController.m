@@ -10,15 +10,15 @@
 
 @interface SVWebViewController ()
 
-@property (nonatomic, retain, readonly) UIBarButtonItem *backBarButtonItem;
-@property (nonatomic, retain, readonly) UIBarButtonItem *forwardBarButtonItem;
-@property (nonatomic, retain, readonly) UIBarButtonItem *refreshBarButtonItem;
-@property (nonatomic, retain, readonly) UIBarButtonItem *stopBarButtonItem;
-@property (nonatomic, retain, readonly) UIBarButtonItem *actionBarButtonItem;
-@property (nonatomic, retain, readonly) UIActionSheet *pageActionSheet;
+@property (nonatomic, strong, readonly) UIBarButtonItem *backBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *forwardBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *refreshBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *stopBarButtonItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *actionBarButtonItem;
+@property (nonatomic, strong, readonly) UIActionSheet *pageActionSheet;
 
-@property (nonatomic, retain, readonly) UIWebView *mainWebView;
-@property (nonatomic, retain) NSURL *URL;
+@property (nonatomic, strong, readonly) UIWebView *mainWebView;
+@property (nonatomic, strong) NSURL *URL;
 
 - (id)initWithAddress:(NSString*)urlString;
 - (id)initWithURL:(NSURL*)URL;
@@ -133,19 +133,7 @@
 #pragma mark - Memory management
 
 - (void)dealloc {
-    mainWebView.delegate = nil;
-    [mainWebView release];
-    
-    [URL release];
-    [backBarButtonItem release];
-    [forwardBarButtonItem release];
-    [refreshBarButtonItem release];
-    [stopBarButtonItem release];
-    [actionBarButtonItem release];
-    
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    
-    [super dealloc];
 }
 
 #pragma mark - View lifecycle
@@ -166,15 +154,6 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    
-    [mainWebView release], mainWebView = nil;
-    
-    [backBarButtonItem release], backBarButtonItem = nil;
-    [forwardBarButtonItem release], forwardBarButtonItem = nil;
-    [refreshBarButtonItem release], refreshBarButtonItem = nil;
-    [stopBarButtonItem release], stopBarButtonItem = nil;
-    [actionBarButtonItem release], actionBarButtonItem = nil;
-    [pageActionSheet release], pageActionSheet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -212,9 +191,9 @@
     
     UIBarButtonItem *refreshStopBarButtonItem = self.mainWebView.isLoading ? self.stopBarButtonItem : self.refreshBarButtonItem;
     
-    UIBarButtonItem *fixedSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     fixedSpace.width = 5.0f;
-    UIBarButtonItem *flexibleSpace = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         NSArray *items;
@@ -245,9 +224,9 @@
                      nil];
         }
         
-        UIToolbar *toolbar = [[[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, toolbarWidth, 44.0f)] autorelease];
+        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, toolbarWidth, 44.0f)];
         toolbar.items = items;
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:toolbar] autorelease];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:toolbar];
     } 
     
     else {
@@ -332,8 +311,6 @@
         [self.pageActionSheet showFromBarButtonItem:self.actionBarButtonItem animated:YES];
     else
         [self.pageActionSheet showFromToolbar:self.navigationController.toolbar];
-    
-    [pageActionSheet release];
 }
 
 - (void)doneButtonClicked:(id)sender {
@@ -356,7 +333,7 @@
     
     else if([title isEqualToString:NSLocalizedString(@"Mail Link to this Page", @"")]) {
         
-		MFMailComposeViewController *mailViewController = [[[MFMailComposeViewController alloc] init] autorelease];
+		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
         
 		mailViewController.mailComposeDelegate = self;
         [mailViewController setSubject:[self.mainWebView stringByEvaluatingJavaScriptFromString:@"document.title"]];
