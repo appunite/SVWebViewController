@@ -1,0 +1,235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B11477551468E1C900953CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11477541468E1C900953CC0 /* Foundation.framework */; };
+		B1F0400B1468E2340047CF69 /* SVModalWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F040061468E2340047CF69 /* SVModalWebViewController.h */; };
+		B1F0400C1468E2340047CF69 /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F040071468E2340047CF69 /* SVModalWebViewController.m */; };
+		B1F0400D1468E2340047CF69 /* SVWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F040091468E2340047CF69 /* SVWebViewController.h */; };
+		B1F0400E1468E2340047CF69 /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F0400A1468E2340047CF69 /* SVWebViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B11477511468E1C900953CC0 /* libSVWebViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSVWebViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B11477541468E1C900953CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B1F040061468E2340047CF69 /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
+		B1F040071468E2340047CF69 /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
+		B1F040091468E2340047CF69 /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
+		B1F0400A1468E2340047CF69 /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
+		B1F0401C1468F4C20047CF69 /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B114774E1468E1C900953CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B11477551468E1C900953CC0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B11477461468E1C900953CC0 = {
+			isa = PBXGroup;
+			children = (
+				B1F040051468E2340047CF69 /* SVWebViewController */,
+				B11477531468E1C900953CC0 /* Frameworks */,
+				B11477521468E1C900953CC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B11477521468E1C900953CC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B11477511468E1C900953CC0 /* libSVWebViewController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B11477531468E1C900953CC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B11477541468E1C900953CC0 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1F040051468E2340047CF69 /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1F0401C1468F4C20047CF69 /* SVWebViewController.bundle */,
+				B1F040061468E2340047CF69 /* SVModalWebViewController.h */,
+				B1F040071468E2340047CF69 /* SVModalWebViewController.m */,
+				B1F040091468E2340047CF69 /* SVWebViewController.h */,
+				B1F0400A1468E2340047CF69 /* SVWebViewController.m */,
+			);
+			path = SVWebViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B114774F1468E1C900953CC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1F0400B1468E2340047CF69 /* SVModalWebViewController.h in Headers */,
+				B1F0400D1468E2340047CF69 /* SVWebViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B11477501468E1C900953CC0 /* SVWebViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B114775E1468E1C900953CC0 /* Build configuration list for PBXNativeTarget "SVWebViewController" */;
+			buildPhases = (
+				B114774D1468E1C900953CC0 /* Sources */,
+				B114774E1468E1C900953CC0 /* Frameworks */,
+				B114774F1468E1C900953CC0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVWebViewController;
+			productName = SVWebViewController;
+			productReference = B11477511468E1C900953CC0 /* libSVWebViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B11477481468E1C900953CC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = TrikeApps;
+			};
+			buildConfigurationList = B114774B1468E1C900953CC0 /* Build configuration list for PBXProject "SVWebViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B11477461468E1C900953CC0;
+			productRefGroup = B11477521468E1C900953CC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B11477501468E1C900953CC0 /* SVWebViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B114774D1468E1C900953CC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1F0400C1468E2340047CF69 /* SVModalWebViewController.m in Sources */,
+				B1F0400E1468E2340047CF69 /* SVWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B114775C1468E1C900953CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B114775D1468E1C900953CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B114775F1468E1C900953CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SVWebViewController.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVWebViewController/SVWebViewController-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B11477601468E1C900953CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SVWebViewController.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SVWebViewController/SVWebViewController-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B114774B1468E1C900953CC0 /* Build configuration list for PBXProject "SVWebViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B114775C1468E1C900953CC0 /* Debug */,
+				B114775D1468E1C900953CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B114775E1468E1C900953CC0 /* Build configuration list for PBXNativeTarget "SVWebViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B114775F1468E1C900953CC0 /* Debug */,
+				B11477601468E1C900953CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B11477481468E1C900953CC0 /* Project object */;
+}
