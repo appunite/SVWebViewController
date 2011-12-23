@@ -111,7 +111,7 @@
 		B11477481468E1C900953CC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = TrikeApps;
 			};
 			buildConfigurationList = B114774B1468E1C900953CC0 /* Build configuration list for PBXProject "SVWebViewController" */;
